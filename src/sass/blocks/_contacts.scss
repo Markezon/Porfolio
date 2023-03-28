@@ -36,6 +36,9 @@
     &__link {
         z-index: 2;
         margin-right: 25px;
+        &:nth-child(3) {
+            margin-right: 21px;
+        }
         &:hover {
             svg {
                 transition: all 0.6s;

@@ -37,6 +37,30 @@
 }
 
 .promo__subtitle {
-    font-size: 19px;
-	text-shadow: 3px 5px 6px $main-color;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 50px;
+    color: #FFF;
+    animation: 5s neon-2 alternate-reverse infinite;    
+    &:before {
+        top: 13%;
+    }
 }
+
+@keyframes neon-2 {
+    from {
+        scale: 100%;
+        text-shadow: 0 0 5px #9c9c9c,
+        0 0 10px #9c9c9c,
+        0 0 15px #9c9c9c,
+        0 0 20px $main-color;
+    }
+    to {
+        scale: 103%;
+        text-shadow: 0 0 20px $main-color,
+        0 0 35px $main-color,
+        0 0 40px $main-color,
+        0 0 50px $main-color,
+        0 0 800px $main-color;
+    }
+}    

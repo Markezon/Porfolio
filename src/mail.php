@@ -8,7 +8,7 @@ $title = "Тема письма";
 
 $c = true;
 // Формирование самого письма
-$title = "ERROR502.NET";
+$title = "TEST";
 foreach ( $_POST as $key => $value ) {
   if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
     $body .= "
@@ -31,16 +31,16 @@ try {
   $mail->SMTPAuth   = true;
 
   // Настройки вашей почты
-  $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-  $mail->Username   = 'dragoncoub@gmail.com'; // Логин на почте
-  $mail->Password   = 'hfildnyilbowtckn'; // Пароль на почте
+  $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
+  $mail->Username   = 'markezont@yandex.ru'; // Логин на почте
+  $mail->Password   = 'xdgnevtgdpkvtgac'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('dragoncoub@gmail.com', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('markezont@yandex.ru', 'Test form Portfolio 1.1'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('dragoncoub@gmail.com');
+  $mail->addAddress('markezont@gmail.com');
 
   // Отправка сообщения
   $mail->isHTML(true);
