@@ -109,6 +109,7 @@ const hamburger = document.querySelector('.hamburger'),
 	menu = document.querySelector('.menu'),
 	closeElem = document.querySelector('.menu__close'),
 	closeElem2 = document.querySelector('.overlay__close');
+	
 
 hamburger.addEventListener('click', () => {
 	menu.classList.add('active'),
@@ -124,6 +125,22 @@ closeElem2.addEventListener('click', () => {
     menu.classList.remove('active'),
     hamburger.classList.remove('rotate');
 });
+
+
+const closeMenu = document.querySelectorAll('.menu__link2');
+for (let i = 0; i < closeMenu.length; i++) {
+
+	closeMenu.forEach(item => {
+		item.addEventListener('click', () => {
+			menu.classList.remove('active'),
+			hamburger.classList.remove('rotate');
+		});
+	});
+}
+
+
+
+
 
 const counters = document.querySelectorAll('.skills__ratings-counter'),
 	lines = document.querySelectorAll('.skills__ratings-line span');
